@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HighLowGameCompose</string>
+    <string name="btn_guess">Guess</string>
+</resources>

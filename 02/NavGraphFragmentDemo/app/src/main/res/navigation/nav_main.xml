@@ -23,6 +23,10 @@
         <argument
             android:name="shopItem"
             app:argType="hu.bme.aut.navgraphfragmentdemo.Item" />
+        <argument
+            android:name="bankcard"
+            app:argType="integer"
+            android:defaultValue="123" />
     </fragment>
 
 

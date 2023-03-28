@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             R.id.action_start -> {
                 Toast.makeText(this,"START", Toast.LENGTH_LONG).show()
 
-                startActivity(Intent(this, BottomMenuActivity::class.java))
+                startActivity(Intent(this, MainActivityNavDrawer::class.java))
             }
             R.id.action_stop -> {
                 Toast.makeText(this,"STOP", Toast.LENGTH_LONG).show()

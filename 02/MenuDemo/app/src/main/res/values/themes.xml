@@ -19,6 +19,12 @@
         <item name="android:textColorSecondary">#0000ff</item>
         <item name="actionMenuTextColor">@android:color/white</item>
     </style>
+    <style name="Theme.MenuDemo.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.MenuDemo.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.MenuDemo.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>
