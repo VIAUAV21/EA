@@ -16,7 +16,8 @@ enum class TodoPriority {
 
     fun getIcon(): Int {
         // The this is the value of this enum object
-        return if (this == NORMAL) R.drawable.normal else R.drawable.important
+        return if (this == NORMAL) R.drawable.normal
+        else R.drawable.important
     }
 
 }

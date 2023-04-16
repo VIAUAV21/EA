@@ -256,8 +256,6 @@ fun TodoCard(
                 )
 
             }
-
-
         }
     }
 }
