@@ -46,6 +46,7 @@ fun SettingsScreen() {
         mutableStateOf("")
     }
     val store = MySettings(context)
+
     val userName = store.getUserName.collectAsState(initial = "")
 
     Column() {
