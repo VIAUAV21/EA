@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var logger: MainLogger
 
-    @TestAnalytics
+    @RealAnalytics
     @Inject
     lateinit var analyitics: AnalyticsEngine
 
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         //tvHello.text = vehicle.type
         tvHello.text = analyitics.doTest()
 
-        demoToaster.doToast()
+        //demoToaster.doToast()
 
         //logger.doLogging()
     }

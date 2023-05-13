@@ -33,6 +33,7 @@ class RealAnalyitics @Inject constructor() : AnalyticsEngine {
 @InstallIn(ApplicationComponent::class)
 object NetworkModule {
 
+
     @TestAnalytics
     @Provides
     fun provideTestAnalytics(
