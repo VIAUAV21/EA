@@ -8,6 +8,10 @@ import hu.bme.aut.multiactivitydemo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        const val KEY_DATA = "KEY_DATA"
+    }
+
     lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,15 +19,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.btnDetails.setOnClickListener {
             // start another activity
 
             val intent = Intent(this,
                 DetailsActivity::class.java)
-
-            intent.putExtra("KEY_DATA",
+            intent.putExtra(KEY_DATA,
                 binding.etData.text.toString())
-
             startActivity(intent)
 
         }

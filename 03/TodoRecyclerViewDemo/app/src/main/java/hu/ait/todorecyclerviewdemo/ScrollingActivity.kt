@@ -117,6 +117,7 @@ class ScrollingActivity : AppCompatActivity(),
     fun initRecyclerView() {
         adapter = TodoAdapter(this, todosViewModel)
         binding.recyclerTodo.adapter = adapter
+        //binding.recyclerTodo.layoutManager = GridLayoutManager(this, 2)
 
         val callback: ItemTouchHelper.Callback = TodoReyclerTouchCallback(adapter)
         val touchHelper = ItemTouchHelper(callback)

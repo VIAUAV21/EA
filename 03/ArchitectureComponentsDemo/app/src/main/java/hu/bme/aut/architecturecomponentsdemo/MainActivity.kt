@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         //lifecycle.addObserver(SensorLifeCycleObserver(this))
 
         //2. LiveData
-/*        val acceleroLiveData = SensorLiveData(this)
+       /*val acceleroLiveData = SensorLiveData(this)
 
         acceleroLiveData.observe(this,
             object : Observer<SensorEvent> {

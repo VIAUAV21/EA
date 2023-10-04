@@ -9,8 +9,9 @@ class DetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
 
-        if (intent.hasExtra("KEY_DATA")) {
-            val data = intent.getStringExtra("KEY_DATA")
+
+        if (intent.hasExtra(MainActivity.KEY_DATA)) {
+            val data = intent.getStringExtra(MainActivity.KEY_DATA)
             Toast.makeText(this,data, Toast.LENGTH_LONG).show()
         }
     }

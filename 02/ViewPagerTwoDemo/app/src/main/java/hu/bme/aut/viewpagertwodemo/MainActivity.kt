@@ -41,8 +41,8 @@ class MainActivity : AppCompatActivity() {
             tab.text = pageNames[position]
         }.attach()
 
-        binding.mainViewPager.setPageTransformer(ZoomOutPageTransformer())
-        //binding.mainViewPager.setPageTransformer(DepthPageTransformer())
+        //binding.mainViewPager.setPageTransformer(ZoomOutPageTransformer())
+        binding.mainViewPager.setPageTransformer(DepthPageTransformer())
     }
 
     override fun onDestroy() {
