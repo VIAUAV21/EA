@@ -62,7 +62,7 @@ class FileScreenViewModel() : ViewModel() {
             } finally {
                 try {
                     inputStream.close()
-                } catch (e: IOException) {
+                } catch (e: Exception) {
                     e.printStackTrace()
                 }
             }

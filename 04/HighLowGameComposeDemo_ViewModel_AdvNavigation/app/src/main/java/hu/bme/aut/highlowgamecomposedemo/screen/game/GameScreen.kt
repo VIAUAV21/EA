@@ -76,29 +76,31 @@ fun GameScreen(
             isError = inputErrorState,
             trailingIcon = {
                 if (inputErrorState)
-                    Icon(Icons.Filled.Warning,
-                        "error", tint = MaterialTheme.colorScheme.error)
+                    Icon(
+                        Icons.Filled.Warning,
+                        "error", tint = MaterialTheme.colorScheme.error
+                    )
             }
         )
         Button(
             enabled = !inputErrorState,
             onClick = {
-            try {
-                gameViewModel.increaseCounter()
+                try {
+                    gameViewModel.increaseCounter()
 
-                val myNum = numberText.toInt()
-                if (myNum == gameViewModel.generatedNum) {
-                    textResult = "You have won!"
-                    showWinDialog = true
-                } else if (myNum < gameViewModel.generatedNum) {
-                    textResult = "The number is larger"
-                } else if (myNum > gameViewModel.generatedNum) {
-                    textResult = "The number is smaller"
+                    val myNum = numberText.toInt()
+                    if (myNum == gameViewModel.generatedNum) {
+                        textResult = "You have won!"
+                        showWinDialog = true
+                    } else if (myNum < gameViewModel.generatedNum) {
+                        textResult = "The number is larger"
+                    } else if (myNum > gameViewModel.generatedNum) {
+                        textResult = "The number is smaller"
+                    }
+                } catch (e: Exception) {
+                    textResult = "Error: ${e.message}"
                 }
-            } catch (e: Exception) {
-                textResult = "Error: ${e.message}"
             }
-        }
 
         ) {
             Text(text = "Guess (${gameViewModel.counter})")
@@ -111,11 +113,12 @@ fun GameScreen(
             color = Color.Blue
         )
 
-        SimpleAlertDialog(
-            show = showWinDialog,
-            onDismiss = {showWinDialog = false},
-            onConfirm = {showWinDialog = false}
-        )
+        if (showWinDialog) {
+            SimpleAlertDialog(
+                onDismiss = { showWinDialog = false },
+                onConfirm = { showWinDialog = false }
+            )
+        }
 
         Button(onClick = {
             gameViewModel.generateNewNum()
@@ -128,31 +131,24 @@ fun GameScreen(
 
 @Composable
 fun SimpleAlertDialog(
-    show: Boolean,
     onDismiss: () -> Unit,
     onConfirm: () -> Unit
 ) {
-    if (show) {
-        AlertDialog(
-            onDismissRequest = onDismiss,
-            title = { Text(text = stringResource(R.string.text_congrats)) },
-            text = { Text(text = "You have won!") },
-            confirmButton = {
-                TextButton(onClick = onConfirm)
-                { Text(text = "OK") }
-            },
-            dismissButton = {
-                TextButton(onClick = onDismiss)
-                { Text(text = "Cancel") }
-            }
-        )
-    }
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(text = stringResource(R.string.text_congrats)) },
+        text = { Text(text = "You have won!") },
+        confirmButton = {
+            TextButton(onClick = onConfirm)
+            { Text(text = "OK") }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss)
+            { Text(text = "Cancel") }
+        }
+    )
+
 }
-
-
-
-
-
 
 
 @Preview(showBackground = true)

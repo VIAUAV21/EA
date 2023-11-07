@@ -15,7 +15,11 @@ private const val BASE_URL =
     "https://api.nasa.gov/"
 
 private val retrofit = Retrofit.Builder()
-    .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
+    .addConverterFactory(
+        Json{
+            ignoreUnknownKeys = true
+        }.asConverterFactory("application/json".toMediaType())
+    )
     .baseUrl(BASE_URL)
     .build()
 

@@ -25,6 +25,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import hu.ait.advancedlayoutdemo.ui.screen.constraintlayout.ConstraintLayoutDemo
+import hu.ait.advancedlayoutdemo.ui.screen.constraintlayout.LoginScreen
 import hu.ait.advancedlayoutdemo.ui.screen.drawer.DrawerScreen
 import hu.ait.advancedlayoutdemo.ui.screen.flow.FlowScreenDemo
 import hu.ait.advancedlayoutdemo.ui.screen.pager.HorizontalPagerDemo
@@ -42,7 +43,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     //Greeting("Android")
-                    //MagnifierDemo()
+                    MagnifierDemo()
                     // Uncomment this to try pager
                     //HorizontalPagerDemo()
 
@@ -51,9 +52,10 @@ class MainActivity : ComponentActivity() {
 
                     // Uncomment this to try constraint layout
                     //ConstraintLayoutDemo()
+                    //LoginScreen()
 
                     // Uncomment this to try scaffold layout
-                    ScaffoldDemoScreen()
+                    //ScaffoldDemoScreen()
 
                     // Uncomment this to try navigation drawer layout
                     //DrawerScreen()

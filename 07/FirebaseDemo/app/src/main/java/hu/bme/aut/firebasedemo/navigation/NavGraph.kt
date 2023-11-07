@@ -11,7 +11,7 @@ import hu.bme.aut.firebasedemo.screen.WritePostScreen
 
 @Composable
 fun NavGraph(
-    navController: NavHostController = rememberNavController(),
+    navController: NavHostController = rememberNavController()
 ) {
     NavHost(
         navController = navController,

@@ -36,7 +36,8 @@ fun MainMenuScreen(
         OutlinedButton(
             modifier = Modifier.requiredWidth(200.dp),
             onClick = {
-                navController.navigate(MainNavigation.AboutScreen.route)
+                navController.navigate(
+                    MainNavigation.AboutScreen.route)
             }
         ) {
             Text("About")

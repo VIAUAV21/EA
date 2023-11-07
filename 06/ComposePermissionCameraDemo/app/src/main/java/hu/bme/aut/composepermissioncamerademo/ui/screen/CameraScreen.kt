@@ -46,6 +46,10 @@ fun CameraScreen() {
         }
     )
 
+    LaunchedEffect(key1 = Unit, block = {
+        cameraPermissionState.launchPermissionRequest()
+    })
+
 
 
     Column(

@@ -35,6 +35,9 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     DisposableDemo()
+                    //GreetingWithLaunchedEffect()
+                    //Counter()
+                    //DisposableScreen()
                 }
             }
         }
@@ -68,7 +71,7 @@ fun GreetingWithLaunchedEffect() {
     var state by remember { mutableStateOf(true) }
     val context = LocalContext.current
 
-    LaunchedEffect(key1 = state) {
+    LaunchedEffect(key1 = Unit) {
         Toast.makeText(context, "Hello", Toast.LENGTH_LONG).show()
     }
 
