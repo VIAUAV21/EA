@@ -27,7 +27,9 @@ class LocationViewModel(application: Application) : ViewModel() {
 
     init {
         locationLiveData.observeForever {
-            locationsFlow.value.add(LatLng(it.latitude,it.longitude))
+            if (it != null) {
+                locationsFlow.value.add(LatLng(it.latitude, it.longitude))
+            }
         }
     }
 

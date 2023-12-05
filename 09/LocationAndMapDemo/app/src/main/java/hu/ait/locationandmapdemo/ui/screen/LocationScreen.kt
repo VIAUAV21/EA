@@ -115,7 +115,7 @@ fun LocationScreen(
                 MapProperties(
                     mapType = MapType.NORMAL,
                     isTrafficEnabled = true,
-                    //mapStyleOptions = MapStyleOptions.loadRawResourceStyle(context, R.raw.mapstyle)
+                    mapStyleOptions = MapStyleOptions.loadRawResourceStyle(context, R.raw.mapstyle)
                 )
             )
         }
@@ -224,6 +224,7 @@ fun LocationScreen(
 
 
 fun getLocationText(location: Location?): String {
+
     return """
        Lat: ${location?.latitude}
        Lng: ${location?.longitude}

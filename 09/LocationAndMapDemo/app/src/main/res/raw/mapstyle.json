@@ -51,6 +51,15 @@
     ]
   },
   {
+    "featureType": "landscape.man_made",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ffeb3b"
+      }
+    ]
+  },
+  {
     "featureType": "landscape.natural",
     "elementType": "geometry",
     "stylers": [
@@ -60,11 +69,23 @@
     ]
   },
   {
-    "featureType": "landscape.natural",
-    "elementType": "labels.text",
+    "featureType": "landscape.natural.terrain",
+    "elementType": "geometry.fill",
     "stylers": [
       {
-        "color": "#ff3d3d"
+        "color": "#ffeb3b"
+      },
+      {
+        "weight": 1.5
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural.terrain",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#ffeb3b"
       }
     ]
   },
@@ -101,6 +122,14 @@
     "stylers": [
       {
         "color": "#447530"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "stylers": [
+      {
+        "visibility": "off"
       }
     ]
   },
