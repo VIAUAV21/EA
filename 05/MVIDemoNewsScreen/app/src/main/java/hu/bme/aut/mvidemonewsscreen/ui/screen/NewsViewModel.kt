@@ -9,6 +9,7 @@ import kotlinx.coroutines.launch
 
 
 sealed class NewsState {
+    object Init : NewsState()
     object Loading : NewsState()
     data class Error(val error: Throwable) : NewsState()
     data class Success(val newsText: String) : NewsState()
@@ -17,7 +18,7 @@ sealed class NewsState {
 class NewsViewModel : ViewModel() {
 
     private val _state = MutableStateFlow<NewsState>(
-        NewsState.Loading)
+        NewsState.Init)
 
     val state = _state.asStateFlow()
 

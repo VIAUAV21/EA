@@ -33,8 +33,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        tvHello.text = info.text
+
         //tvHello.text = vehicle.type
-        tvHello.text = analyitics.doTest()
+        //tvHello.text = analyitics.doTest()
 
         //demoToaster.doToast()
 

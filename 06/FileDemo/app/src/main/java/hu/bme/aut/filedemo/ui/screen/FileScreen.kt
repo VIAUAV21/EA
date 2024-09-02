@@ -22,6 +22,8 @@ fun FileScreen(
     val context = LocalContext.current
     var textToWriteToFile by rememberSaveable { mutableStateOf("") }
     var fileContent by rememberSaveable { mutableStateOf("") }
+
+
     Column() {
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(0.8f),

@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
 
         pageNames = resources.getStringArray(R.array.tab_names)
 
-        val fragmentStatePagerAdapter = MyFragmentStatePagerAdapter(this, 2)
+        val fragmentStatePagerAdapter = MyFragmentStatePagerAdapter(
+            this, 2)
         binding.mainViewPager.adapter = fragmentStatePagerAdapter
 
         //binding.mainViewPager.orientation = ViewPager2.ORIENTATION_VERTICAL

@@ -71,9 +71,10 @@ fun GreetingWithLaunchedEffect() {
     var state by remember { mutableStateOf(true) }
     val context = LocalContext.current
 
-    LaunchedEffect(key1 = Unit) {
+    LaunchedEffect(key1 = state) {
         Toast.makeText(context, "Hello", Toast.LENGTH_LONG).show()
     }
+
 
     Column {
         Button(onClick = {

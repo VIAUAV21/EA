@@ -60,7 +60,7 @@ fun MyAppNavHost(
     ) {
         composable("mainmenu") {
             MainMenuScreen(
-                onNavigateToGame = { navController.navigate("game?upperBound=3") },
+                onNavigateToGame = { navController.navigate("game?upperBound=100") },
                 navController
             )
         }

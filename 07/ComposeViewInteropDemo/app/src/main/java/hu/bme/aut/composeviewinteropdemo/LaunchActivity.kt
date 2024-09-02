@@ -32,6 +32,7 @@ class LaunchActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.composeView.setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
+
         binding.composeView.setContent {
             ComposeViewInteropDemoTheme {
                 // A surface container using the 'background' color from the theme

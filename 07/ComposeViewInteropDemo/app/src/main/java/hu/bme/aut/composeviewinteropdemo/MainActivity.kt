@@ -38,6 +38,7 @@ class MainActivity : ComponentActivity() {
 fun ViewDemo() {
     Column() {
         Text(text = "Hello View Demo from Compose!")
+
         AndroidView(
             factory = { context ->
                 val binding = LayoutDemoBinding.inflate(LayoutInflater.from(context))
@@ -47,7 +48,9 @@ fun ViewDemo() {
 
                 binding.root
             },
-            update = {  }
+            update = {
+
+            }
         )
     }
 }

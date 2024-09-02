@@ -51,7 +51,6 @@ fun CameraScreen() {
     })
 
 
-
     Column(
         modifier = Modifier.padding(20.dp)
     ) {
