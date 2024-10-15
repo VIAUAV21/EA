@@ -207,11 +207,11 @@ fun TodoCard(
                     Text(
                         text = todoItem.title,
                         textDecoration =
-                        if (todoItem.isDone) {
-                            TextDecoration.LineThrough
-                        } else {
-                            TextDecoration.None
-                        }
+                            if (todoItem.isDone) {
+                                TextDecoration.LineThrough
+                            } else {
+                                TextDecoration.None
+                            }
                     )
                 }
 
